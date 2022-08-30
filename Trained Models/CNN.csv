@@ -1,0 +1,17 @@
+Param;Value
+Nodes1;16
+Nodes2;32
+Nodes4;32
+Reg1;0.07303757276031908
+Reg2;0.03004015751315763
+Reg4;0.01817306565260718
+batch_size;503
+dropout;0.21425971521639622
+filter1_size1;3
+filter1_size2;3
+filter2_size1;4
+filter2_size2;2
+loss_fn;<function custom_loss at 0x00000256D0567430>
+lr;0.005750408940783194
+momentum;0.18586809228032708
+nesterov;True
