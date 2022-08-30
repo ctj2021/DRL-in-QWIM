@@ -1,35 +1,7 @@
-# QWIM_RL_project  
-**Team name:** Alpha Aware  
-**Team members:**  
-Tianjing	Cao: tc3385@nyu.edu  
-Xiangyu (Nicole) Zhao: xz2616@nyu.edu  
-Ruolian (Teresa)	Duan: rd3111@nyu.edu  
-Zhuotian	Tang: zt2017@nyu.edu  
-Wenqing	Gao: wg2125@nyu.edu  
-  
-# First Meeting 5/23/2022  
-**Agenda**  
-1. self-intro  
-2. team name  
-3. schedule first meeting with Cristian (5.24/26 6:00 pm - 8:00pm)  
+# BOA Reinforcement Learning Capstone
+## Deep Reinforcement Learning in Quantitative Wealth and Investment Management  
 
-# 2nd Meeting 6/7/2022
-1. Meet with Cristian  
-2. several platforms and packages to learn  
-
-# 3rd 6/21/2022  
-1. Meet with capstone course's mentor Francisco  
-2. reached the agreement to use LaTeX to edit report  
-2. found proper report template on [Overleaf](https://www.overleaf.com/)  
-4. determined datasets, download indices' daily price during 2000-2022 from yfinance before next meeting
-
-# 4th 6/26/2022   
-1. catch up progress on latex self-learning  
-2. divide work and assign sections 
-
-# 5th 7/1/2022  
-1. review & merge each teamates' written work
-
-# 6th 7/6/2022  
-1. Revised & submitted midterm draft
-2. divided the coding part
+This project mainly focuse on combining Deep Q-Network (DQN) on global indices’ asset allocation and performing experimental tests to observe whether or not our model will further prove the profitability and generalization.
+The input data in this project is time series data (years of daily) of 8 different market indices.
+We combine reinforcement learning with three different neural network strategies — Convolutional Neural Network, Recurrent Neural Network, and Long Short-Term Memory Neural Network — to train the optimal allocation. The reward function is assigned as portfolio’s sharpe ratio at reallocation spot, so that the trading agent will be driven to the direction of maximizing sharpe ratio. The logic here is to search for the allocation that strikes some sort of balance between maximizing expected return and reducing the risk of the portfolio. Also, we utilize the Equal Weighted Portfolio (EWP), where each asset has an equal weight in the portfolio, as our benchmark. In addition to comparing the returns of different neural network approaches to the benchmark, we also made other comparisons, such as normalizing the loss, replacing Sharpe ratio with Sortino ratio to measure the effectiveness of the different allocation policies, and comparing with traditional portfolio allocation models — Markowitz Model and Black-Litterman Model.
+Based on our analysis, we can conclude that there is no clear winner among the three DRL strategies versus benchmark, depending on how we choose the loss function and whether it is normalized or not. Compared to classic portfolio allocation approaches, DRL models stands out for its ability to capture arbitrage space when there is a clear trend in the market.
